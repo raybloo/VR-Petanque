@@ -18,7 +18,8 @@ public class BallCanon : MonoBehaviour
         
         if(Input.GetKeyDown(KeyCode.N))
         {
-            float angle = Random.Range(30f, 75f);
+            float angle = Random.Range(50f, 50f);
+            angle = 43f;
             Debug.Log(angle);
             GameObject projectile = Instantiate(ball, transform.position, transform.rotation, transform);
             projectile.GetComponent<Rigidbody>().velocity = new Vector3(0, Mathf.Sin(2f * Mathf.PI * angle / 360f) * speed, Mathf.Cos(2f * Mathf.PI * angle / 360f) * speed);
